@@ -31,11 +31,8 @@ class ImageGrid extends Component {
       });
   }
   handlePageClick(page) {
-    console.log(page.selected);
-    fetch(
-      `${ApiCalls.get.photos}?page=${page.selected + 1}&per_page=30`,
-      requestOptions
-    )
+    const selected = page.selected + 1;
+    fetch(`${ApiCalls.get.photos}?page=${selected}&per_page=30`, requestOptions)
       .then(res => res.json())
       .then(photos => {
         this.setState({ photos });
