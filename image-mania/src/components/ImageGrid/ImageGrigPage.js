@@ -10,7 +10,15 @@ const ImageGridPage = props => {
       {gridImages.length === 0 && props.errors === "" ? (
         <Loading />
       ) : (
-        <Gallery images={gridImages} showLightboxThumbnails={true} />
+        <div className="ImageGrid__gallery--block">
+          <Gallery
+            images={gridImages}
+            margin={3}
+            showLightboxThumbnails={true}
+            enableImageSelection={false}
+            backdropClosesModal={true}
+          />
+        </div>
       )}
     </div>
   );

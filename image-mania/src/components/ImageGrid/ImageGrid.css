@@ -1,0 +1,50 @@
+.ImageGrid__gallery--block {
+  display: block;
+  min-height: 1px;
+  width: 100%;
+  overflow: auto;
+}
+.ImageGrid__pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.ImageGrid__pagination--div > ul {
+  list-style: none;
+}
+
+.ImageGrid__pagination--active {
+  background-color: #4caf50;
+  color: white;
+  border: 1px solid #4caf50;
+  float: left;
+  cursor: pointer;
+}
+.ImageGrid__pagination--div {
+  display: block;
+  min-height: 1px;
+  overflow: auto;
+  padding-left: 35%;
+}
+
+@media screen and (max-width: 740px) {
+  .ImageGrid__paginate--div {
+    padding-left: 14%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .ImageGrid__paginate--div {
+    transform: translate(-11%, 0);
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .ImageGrid__paginate--div {
+    transform: translate(-18%, 0);
+  }
+}
