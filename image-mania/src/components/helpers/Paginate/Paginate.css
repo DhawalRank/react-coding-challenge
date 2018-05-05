@@ -19,27 +19,31 @@
   cursor: pointer;
 }
 .Paginate__pagination--div {
-  display: block;
-  min-height: 1px;
-  overflow: auto;
   padding-left: 35%;
   padding-bottom: 2%;
+  overflow: auto;
 }
 
 @media screen and (max-width: 740px) {
   .Paginate__pagintion--div {
     padding-left: 14%;
+    padding-bottom: 2%;
+    overflow: auto;
   }
 }
 
 @media screen and (max-width: 375px) {
   .Paginate__pagination--div {
     transform: translate(-11%, 0);
+    padding-bottom: 2%;
+    overflow: auto;
   }
 }
 
 @media screen and (max-width: 414px) {
   .Paginate__pagination--div {
     transform: translate(-18%, 0);
+    padding-bottom: 2%;
+    overflow: auto;
   }
 }
