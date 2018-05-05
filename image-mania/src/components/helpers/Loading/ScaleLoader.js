@@ -2,7 +2,7 @@ import React from "react";
 import { ScaleLoader } from "react-spinners";
 import "./Loading.css";
 
-export const CustomScaleLoader = () => {
+const CustomScaleLoader = () => {
   return (
     <div className="Loading__div--centered">
       <ScaleLoader
@@ -16,3 +16,5 @@ export const CustomScaleLoader = () => {
     </div>
   );
 };
+
+export default CustomScaleLoader;
