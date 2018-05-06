@@ -10,7 +10,7 @@ $ cd react-coding-challenge/image-mania
 $ npm install
 ```
 
-Before starting the application, please move the Credentials.js file sent in the email to the following directory
+Before starting the application, please move the Credentials.json file sent in the email to the following directory
 
 ```
 src/unsplash/
