@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Paginate from "../helpers/Paginate/Paginate";
 import Gallery from "../helpers/Gallery/Gallery";
-import { Credentials } from "../../unsplash/Credentials";
+import Credentials from "../../unsplash/Credentials.json";
 import { ApiCalls } from "../../unsplash/ApiCalls";
 
 const requestOptions = {
