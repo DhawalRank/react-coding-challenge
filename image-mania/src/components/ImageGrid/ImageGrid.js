@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-import ImageGridPage from "./ImageGrigPage";
 import Paginate from "../helpers/Paginate/Paginate";
+import Gallery from "../helpers/Gallery/Gallery";
 import { Credentials } from "../../unsplash/Credentials";
 import { ApiCalls } from "../../unsplash/ApiCalls";
-import "./ImageGrid.css";
 
 const requestOptions = {
   method: "GET",
@@ -25,7 +24,14 @@ class ImageGrid extends Component {
     fetch(`${ApiCalls.get.photos}?page=${selected}&per_page=30`, requestOptions)
       .then(res => res.json())
       .then(photos => {
-        this.setState({ photos });
+        if (photos.length === 0) {
+          this.setState({ errors: "No Images Found." });
+        } else {
+          this.setState({
+            photos,
+            errors: ""
+          });
+        }
       })
       .catch(err => {
         console.error("Error happened during fetching!", err);
@@ -33,9 +39,11 @@ class ImageGrid extends Component {
       });
   }
   render() {
+    const photos = generateGridImages(this.state.photos);
+    console.log(photos);
     return (
       <div>
-        <ImageGridPage photos={this.state.photos} errors={this.state.errors} />
+        <Gallery photos={photos} errors={this.state.errors} />
         <Paginate
           handlePageClick={page => this.handlePageClick(page)}
           pageCount={this.state.pageCount}
@@ -43,6 +51,21 @@ class ImageGrid extends Component {
       </div>
     );
   }
+}
+function generateGridImages(photos) {
+  const gridPhotos = [];
+  if (photos) {
+    photos.forEach(aPhoto => {
+      gridPhotos.push({
+        src: aPhoto.urls.full,
+        thumbnailWidth: 0,
+        thumbnailHeight: 0,
+        thumbnail: aPhoto.urls.thumb,
+        caption: `Submitted By: @${aPhoto.user.username}`
+      });
+    });
+  }
+  return gridPhotos;
 }
 
 export default ImageGrid;
