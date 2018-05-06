@@ -16,7 +16,7 @@ class ImageGrid extends Component {
   state = {
     errors: "",
     photos: [],
-    pageCount: 100
+    pageCount: 200
   };
 
   handlePageClick(page) {

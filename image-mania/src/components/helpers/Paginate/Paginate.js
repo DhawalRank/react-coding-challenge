@@ -14,7 +14,7 @@ const Paginate = props => {
         activeClassName="Paginate__pagination--active"
         pageCount={props.pageCount}
         marginPagesDisplayed={2}
-        pageRangeDisplayed={1}
+        pageRangeDisplayed={0}
         onPageChange={page => props.handlePageClick(page)}
         containerClassName={"Paginate__pagination"}
       />
