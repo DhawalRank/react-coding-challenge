@@ -15,7 +15,7 @@ const Gallery = props => {
             <div className="Gallery__container">
               <GridGallery
                 images={props.photos}
-                margin={3}
+                margin={10}
                 showLightboxThumbnails={true}
                 enableImageSelection={false}
                 backdropClosesModal={true}

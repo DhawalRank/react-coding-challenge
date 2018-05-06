@@ -60,7 +60,7 @@ function generateGridImages(photos) {
         thumbnailWidth: 0,
         thumbnailHeight: 0,
         thumbnail: aPhoto.urls.thumb,
-        caption: `Submitted By: @${aPhoto.user.username}`
+        caption: `@${aPhoto.user.username}: ${aPhoto.user.bio}`
       });
     });
   }
