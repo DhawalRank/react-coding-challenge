@@ -40,7 +40,6 @@ class ImageGrid extends Component {
   }
   render() {
     const photos = generateGridImages(this.state.photos);
-    console.log(photos);
     return (
       <div>
         <Gallery photos={photos} errors={this.state.errors} />

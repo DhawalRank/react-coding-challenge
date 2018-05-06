@@ -23,9 +23,7 @@ const Gallery = props => {
             </div>
           ) : (
             <div className="Gallery__container">
-              <h2>
-                <span>{props.errors}</span>
-              </h2>
+              <h2>{props.errors}</h2>
             </div>
           )}
         </div>
